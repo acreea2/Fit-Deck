@@ -26,17 +26,17 @@ class FourCardHomeViewController: UIViewController {
     
 
     
-    var gradientLayer1: CAGradientLayer!
-    
-    func createGradientLayer() {
-        gradientLayer1 = CAGradientLayer()
-        gradientLayer1.frame = self.view.bounds
-        
-        gradientLayer1.colors = [color1a, color1b]
-        
-        view.layer.addSublayer(gradientLayer1)
-//        self.Card1.layer.addSublayer(gradientLayer1)
-    }
+//    var gradientLayer1: CAGradientLayer!
+//    
+//    func createGradientLayer() {
+//        gradientLayer1 = CAGradientLayer()
+//        gradientLayer1.frame = self.view.bounds
+//        
+//        gradientLayer1.colors = [color1a, color1b]
+//        
+//        view.layer.addSublayer(gradientLayer1)
+////        self.Card1.layer.addSublayer(gradientLayer1)
+//    }
     
     
     
@@ -46,33 +46,26 @@ class FourCardHomeViewController: UIViewController {
         
      
         
-        Card1.layer.cornerRadius = 5
+        Card1.layer.cornerRadius = 10
         Card1.layer.borderWidth = 1
         Card1.layer.borderColor = UIColor.clear.cgColor
-//        self.Card1.layer.addSublayer(gradientLayer1)
-        
-        
-//        gradientLayer.frame = self.view.bounds
-//        
-//            self.view.layer.addSublayer(gradientLayer)
-//        
-//        Card1.view.frame.createGradientLayer()
+        Card1.applyGradient1()
 
-//        Card1.gradient1 = [color1a, color1b]
-//        Card1.layer.insertSublayer(gradient1, at: 0)
         
-        Card2.layer.cornerRadius = 5
+        Card2.layer.cornerRadius = 10
         Card2.layer.borderWidth = 1
         Card2.layer.borderColor = UIColor.clear.cgColor
+        Card2.applyGradient2()
         
-        Card3.layer.cornerRadius = 5
+        Card3.layer.cornerRadius = 10
         Card3.layer.borderWidth = 1
         Card3.layer.borderColor = UIColor.clear.cgColor
+        Card3.applyGradient3()
         
-        Card4.layer.cornerRadius = 5
+        Card4.layer.cornerRadius = 10
         Card4.layer.borderWidth = 1
         Card4.layer.borderColor = UIColor.clear.cgColor
-        
+        Card4.applyGradient4()
         
         
         

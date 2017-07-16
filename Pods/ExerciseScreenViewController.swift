@@ -17,6 +17,7 @@ class ExerciseScreenViewController: UIViewController {
     @IBOutlet weak var ExerciseNumber: UILabel!
     @IBOutlet weak var ExerciseName: UILabel!
     
+    @IBOutlet var BackgroundView: UIView!
     
     var welcomeArray = [String]()
     var ExerciseNameArray = [String]()
@@ -26,8 +27,9 @@ class ExerciseScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
+//    Why does below break?
+//        self.BackgroundView.applyGradient1()
         
         //                Random Inspiring Message
         let welcomeArray = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!"]

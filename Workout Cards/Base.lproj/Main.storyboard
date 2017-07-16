@@ -338,6 +338,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BackgroundView" destination="6TJ-zV-Uqf" id="FZh-YV-EjZ"/>
                         <outlet property="CurrentWorkoutCard" destination="CZX-cl-tGa" id="mZ7-WM-Nbv"/>
                         <outlet property="ExerciseName" destination="Pee-Yj-xD7" id="e3o-dQ-BMY"/>
                         <outlet property="ExerciseNumber" destination="4EX-Xs-GMx" id="Fep-fn-nUX"/>

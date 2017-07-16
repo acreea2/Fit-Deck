@@ -17,6 +17,7 @@
 		46CA0A6C1DFF80EB0018786C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CA0A6A1DFF80EB0018786C /* Main.storyboard */; };
 		46CA0A6E1DFF80EB0018786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CA0A6D1DFF80EB0018786C /* Assets.xcassets */; };
 		46CA0A711DFF80EB0018786C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CA0A6F1DFF80EB0018786C /* LaunchScreen.storyboard */; };
+		46F0B06E1F1C086100A71F5A /* UI_Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0B06D1F1C086100A71F5A /* UI_Gradients.swift */; };
 		665560A61344C6DEC7C92EB3 /* Pods_Workout_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806C996CE5F82935342C9F58 /* Pods_Workout_Cards.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		46CA0A6D1DFF80EB0018786C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46CA0A701DFF80EB0018786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46CA0A721DFF80EB0018786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F0B06D1F1C086100A71F5A /* UI_Gradients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI_Gradients.swift; sourceTree = "<group>"; };
 		806C996CE5F82935342C9F58 /* Pods_Workout_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89798919B07E6F11FBCA3231 /* Pods-Workout Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout Cards/Pods-Workout Cards.release.xcconfig"; sourceTree = "<group>"; };
 		A8FDF581792474C5B74117D7 /* Pods-Workout Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout Cards/Pods-Workout Cards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				46A37BB41F1C002400963B9F /* ExerciseScreenViewController.swift */,
 				46A37BB81F1C00A800963B9F /* ArmsExercises.swift */,
 				46A37BB01F1BFE5000963B9F /* ExerciseLibrary.swift */,
+				46F0B06C1F1C083000A71F5A /* Styles */,
 				463C046F1F1B04FF004F44B2 /* FourCardHomeViewController.swift */,
 				463C04691F1AF1B2004F44B2 /* SecondViewController.swift */,
 				46CA0A6D1DFF80EB0018786C /* Assets.xcassets */,
@@ -84,6 +87,14 @@
 				46CA0A721DFF80EB0018786C /* Info.plist */,
 			);
 			path = "Workout Cards";
+			sourceTree = "<group>";
+		};
+		46F0B06C1F1C083000A71F5A /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				46F0B06D1F1C086100A71F5A /* UI_Gradients.swift */,
+			);
+			name = Styles;
 			sourceTree = "<group>";
 		};
 		5955F6C419B9276EC2494781 /* Frameworks */ = {
@@ -231,6 +242,7 @@
 				463C04701F1B04FF004F44B2 /* FourCardHomeViewController.swift in Sources */,
 				463C046A1F1AF1B2004F44B2 /* SecondViewController.swift in Sources */,
 				46A37BB91F1C00A800963B9F /* ArmsExercises.swift in Sources */,
+				46F0B06E1F1C086100A71F5A /* UI_Gradients.swift in Sources */,
 				46CA0A691DFF80EB0018786C /* ViewController.swift in Sources */,
 				46CA0A671DFF80EB0018786C /* AppDelegate.swift in Sources */,
 				46A37BB11F1BFE5000963B9F /* ExerciseLibrary.swift in Sources */,
