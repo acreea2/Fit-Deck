@@ -1,0 +1,12 @@
+PODS:
+  - CenteredCollectionView (1.0)
+
+DEPENDENCIES:
+  - CenteredCollectionView
+
+SPEC CHECKSUMS:
+  CenteredCollectionView: ac9c4d8a22abe9d108ff4d7dac135dd73f9a5516
+
+PODFILE CHECKSUM: fff1f98a1988c7e22c90c9b864f96fb16d949013
+
+COCOAPODS: 1.2.1
