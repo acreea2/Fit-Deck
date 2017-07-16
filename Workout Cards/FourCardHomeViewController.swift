@@ -9,7 +9,7 @@
 import UIKit
 
 class FourCardHomeViewController: UIViewController {
-
+    
     
     @IBOutlet weak var Card1: UIView!
     @IBOutlet weak var Card2: UIView!
@@ -24,19 +24,21 @@ class FourCardHomeViewController: UIViewController {
     let color1a = UIColor(rgb: 0x4FE18A)
     let color1b = UIColor(rgb: 0x34CECA)
     
-
     
-//    var gradientLayer1: CAGradientLayer!
-//    
-//    func createGradientLayer() {
-//        gradientLayer1 = CAGradientLayer()
-//        gradientLayer1.frame = self.view.bounds
-//        
-//        gradientLayer1.colors = [color1a, color1b]
-//        
-//        view.layer.addSublayer(gradientLayer1)
-////        self.Card1.layer.addSublayer(gradientLayer1)
-//    }
+    
+    //    var gradientLayer1: CAGradientLayer!
+    //
+    //    func createGradientLayer() {
+    //        gradientLayer1 = CAGradientLayer()
+    //        gradientLayer1.frame = self.view.bounds
+    //
+    //        gradientLayer1.colors = [color1a, color1b]
+    //
+    //        view.layer.addSublayer(gradientLayer1)
+    ////        self.Card1.layer.addSublayer(gradientLayer1)
+    //    }
+    
+    
     
     
     
@@ -44,13 +46,36 @@ class FourCardHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
+        
+        
+        
+        //        Card Intros
+        //        Intro Area Welcome Message
+            self.Card1.alpha = 0.0
+            self.Card1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.Card1.frame.origin.y = self.Card1.frame.origin.y+50
+
+        self.Card2.alpha = 0.0
+        self.Card2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        self.Card2.frame.origin.y = self.Card1.frame.origin.y+50
+        
+        self.Card3.alpha = 0.0
+        self.Card3.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        self.Card3.frame.origin.y = self.Card1.frame.origin.y+50
+        
+        self.Card4.alpha = 0.0
+        self.Card4.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        self.Card4.frame.origin.y = self.Card1.frame.origin.y+50
+        
+        
+        
+        
         
         Card1.layer.cornerRadius = 10
         Card1.layer.borderWidth = 1
         Card1.layer.borderColor = UIColor.clear.cgColor
         Card1.applyGradient1()
-
+        
         
         Card2.layer.cornerRadius = 10
         Card2.layer.borderWidth = 1
@@ -66,20 +91,80 @@ class FourCardHomeViewController: UIViewController {
         Card4.layer.borderWidth = 1
         Card4.layer.borderColor = UIColor.clear.cgColor
         Card4.applyGradient4()
+    
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.Card1.alpha = 1.0
+            self.Card1.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.Card1.frame.origin.y = self.Card1.frame.origin.y-0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            //        Exit
+            UIView.animate(withDuration: 0.3, delay: 1.7, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                //                self.WorkoutWelcome.alpha = 0.0
+            }, completion: nil)
+        })
+        
+        UIView.animate(withDuration: 1.5, delay: 0.3, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.Card2.alpha = 1.0
+            self.Card2.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.Card2.frame.origin.y = self.Card2.frame.origin.y-0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            //        Exit
+            UIView.animate(withDuration: 0.3, delay: 1.7, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                //                self.WorkoutWelcome.alpha = 0.0
+            }, completion: nil)
+        })
+        
+        UIView.animate(withDuration: 1.5, delay: 0.6, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.Card3.alpha = 1.0
+            self.Card3.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.Card3.frame.origin.y = self.Card3.frame.origin.y-0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            //        Exit
+            UIView.animate(withDuration: 0.3, delay: 1.7, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                //                self.WorkoutWelcome.alpha = 0.0
+            }, completion: nil)
+        })
+        
+        UIView.animate(withDuration: 1.5, delay: 0.9, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.Card4.alpha = 1.0
+            self.Card4.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.Card4.frame.origin.y = self.Card4.frame.origin.y-0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            //        Exit
+            UIView.animate(withDuration: 0.3, delay: 1.7, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                //                self.WorkoutWelcome.alpha = 0.0
+            }, completion: nil)
+        })
+
+        
         
         
         
         
     }
-
-
+    
+    
     
     @IBAction func ButtonCard1(_ sender: Any) {
     }
     
-
     
-
+    
+    
     
 }
 
