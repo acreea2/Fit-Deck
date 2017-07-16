@@ -26,11 +26,11 @@ let color4b = UIColor(rgb: 0x415ABD)
 extension UIView {
     func applyGradient1() {
         let gradient = CAGradientLayer()
-//        gradient.frame = bounds
+        gradient.frame = bounds
         gradient.locations = [0, 1]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
-//        gradient.cornerRadius = 10
+        gradient.cornerRadius = 10
         gradient.colors = [
             color1a.cgColor,
             color1b.cgColor
@@ -43,7 +43,7 @@ extension UIView {
 extension UIView {
     func applyGradient2() {
         let gradient = CAGradientLayer()
-//        gradient.frame = bounds
+        gradient.frame = bounds
         gradient.locations = [0, 1]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
@@ -60,7 +60,7 @@ extension UIView {
 extension UIView {
     func applyGradient3() {
         let gradient = CAGradientLayer()
-//        gradient.frame = bounds
+        gradient.frame = bounds
         gradient.locations = [0, 1]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
@@ -76,7 +76,7 @@ extension UIView {
 extension UIView {
     func applyGradient4() {
         let gradient = CAGradientLayer()
-//        gradient.frame = bounds
+        gradient.frame = bounds
         gradient.locations = [0, 1]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
