@@ -368,10 +368,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTr-L8-BEZ">
-                                <rect key="frame" x="16" y="36" width="30" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <state key="normal" title="&lt;">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTr-L8-BEZ">
+                                <rect key="frame" x="16" y="36" width="37" height="37"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" image="exit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -441,7 +443,7 @@
                             <constraint firstItem="Wt2-sC-AwE" firstAttribute="top" secondItem="hEE-UJ-t6c" secondAttribute="bottom" constant="48" id="BfC-e6-5Xy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="99F-rv-I2I" secondAttribute="trailing" constant="32" id="EPB-sx-rMm"/>
                             <constraint firstItem="DCG-RO-cdO" firstAttribute="centerY" secondItem="ynG-fK-V1p" secondAttribute="centerY" id="KsV-d2-LOk"/>
-                            <constraint firstItem="VTr-L8-BEZ" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leading" constant="16" id="PaK-Nf-nUT"/>
+                            <constraint firstItem="VTr-L8-BEZ" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leading" constant="16" id="Mgb-U3-nog"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wt2-sC-AwE" secondAttribute="trailing" constant="32" id="dSK-SS-qGk"/>
                             <constraint firstItem="Wt2-sC-AwE" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leadingMargin" constant="32" id="fkS-ID-Qre"/>
                             <constraint firstItem="99F-rv-I2I" firstAttribute="top" secondItem="Wt2-sC-AwE" secondAttribute="bottom" constant="48" id="hU5-kp-8gx"/>
@@ -464,5 +466,8 @@
             <point key="canvasLocation" x="924" y="1595.352323838081"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exit" width="37" height="37"/>
+    </resources>
     <color key="tintColor" red="0.21176470589999999" green="0.51372549020000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>

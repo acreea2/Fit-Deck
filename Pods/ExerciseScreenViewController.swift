@@ -24,13 +24,14 @@ class ExerciseScreenViewController: UIViewController {
     var ExerciseNameArray = [String]()
     var ExerciseNumberArray = [String]()
     
+    var exerciseStepCount = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//    Why does below break?
-//        self.BackgroundView.applyGradient0()
+        
+        //    Why does below break?
+        //        self.BackgroundView.applyGradient0()
         
         //                Random Inspiring Message
         let welcomeArray = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!"]
@@ -113,6 +114,19 @@ class ExerciseScreenViewController: UIViewController {
             (finished: Bool) -> Void in
         })
         
+        
+    
+        while exerciseStepCount != 10 {
+            print("less than 10")
+        }
+        
+        if exerciseStepCount > 10 {
+            print("yo its more!")
+        }
+//        else {
+//            <#do that#>
+//        }
+        
     } // View Did Appear End
     
     
@@ -126,6 +140,13 @@ class ExerciseScreenViewController: UIViewController {
     
     
     @IBAction func NextButtonTapped(_ sender: Any) {
+        
+        func plusOneCount() {
+            exerciseStepCount += 1
+            print("\(exerciseStepCount)")
+        }
+        
+        plusOneCount()
         
         // Fade out to set the text
         UIView.animate(
@@ -169,7 +190,7 @@ class ExerciseScreenViewController: UIViewController {
         UIView.animate(withDuration: 0.1, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.NextButtonOutlet.alpha = 1.0
             self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//            self.NextButtonOutlet.frame.origin.y = self.WorkoutWelcome.frame.origin.y-0
+            //            self.NextButtonOutlet.frame.origin.y = self.WorkoutWelcome.frame.origin.y-0
         }, completion: {
             (finished: Bool) -> Void in
             
@@ -178,7 +199,7 @@ class ExerciseScreenViewController: UIViewController {
                 self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         })
-
+        
         
     }
     
@@ -193,21 +214,6 @@ extension Array {
         return self[index]
     }
 }
-
-
-//extension RandoExercise{
-//    func RandomExerciseCount() {
-//        let ExerciseNumberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
-//        self.ExerciseNumber.text = ExerciseNumberArray.randomItem()
-//    }
-//}
-//
-//extension RandoTitle{
-//    func RandomExerciseName() {
-//        let ExerciseNameArray = ["Mountain Climbers", "Crunches", "Bicycles", "Toe Touches"]
-//        self.ExerciseName.text = ExerciseNameArray.randomItem()
-//    }
-//}
 
 
 
