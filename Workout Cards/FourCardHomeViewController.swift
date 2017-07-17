@@ -49,23 +49,36 @@ class FourCardHomeViewController: UIViewController {
         
         
         
-        //        Card Intros
-        //        Intro Area Welcome Message
-            self.Card1.alpha = 0.0
-            self.Card1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-            self.Card1.frame.origin.y = self.Card1.frame.origin.y+50
-
+    //        Card Intros
+    //        Intro Area Welcome Message
+        self.Card1.alpha = 0.0
+        self.Card1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        self.Card1.frame.origin.y = self.Card1.frame.origin.y+50
+        Card1.layer.shadowRadius = 10
+        Card1.layer.shadowOpacity = 0.15
+        Card1.layer.shadowOffset = CGSize(width: 5, height: 5)
+        
         self.Card2.alpha = 0.0
         self.Card2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         self.Card2.frame.origin.y = self.Card1.frame.origin.y+50
+        Card2.layer.shadowRadius = 10
+        Card2.layer.shadowOpacity = 0.15
+        Card2.layer.shadowOffset = CGSize(width: 5, height: 5)
+    
         
         self.Card3.alpha = 0.0
         self.Card3.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         self.Card3.frame.origin.y = self.Card1.frame.origin.y+50
+        Card3.layer.shadowRadius = 10
+        Card3.layer.shadowOpacity = 0.15
+        Card3.layer.shadowOffset = CGSize(width: 5, height: 5)
         
         self.Card4.alpha = 0.0
         self.Card4.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         self.Card4.frame.origin.y = self.Card1.frame.origin.y+50
+        Card4.layer.shadowRadius = 10
+        Card4.layer.shadowOpacity = 0.15
+        Card4.layer.shadowOffset = CGSize(width: 5, height: 5)
         
         
         

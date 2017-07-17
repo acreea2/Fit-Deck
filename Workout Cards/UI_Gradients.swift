@@ -22,6 +22,23 @@ let color4b = UIColor(rgb: 0x415ABD)
 
 
 
+extension UIView {
+    func applyGradient0() {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.cornerRadius = 10
+        gradient.colors = [
+            color1a.cgColor,
+            color1b.cgColor
+        ]
+        layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+
 
 extension UIView {
     func applyGradient1() {

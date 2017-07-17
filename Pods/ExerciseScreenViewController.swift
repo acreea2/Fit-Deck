@@ -11,13 +11,14 @@ import UIKit
 class ExerciseScreenViewController: UIViewController {
     
     @IBOutlet weak var WorkoutWelcome: UILabel!
-    @IBOutlet weak var NextButtonOutlet: UIButton!
     @IBOutlet weak var CurrentWorkoutCard: UIView!
+    
+    @IBOutlet weak var NextButtonOutlet: UIButton!
     
     @IBOutlet weak var ExerciseNumber: UILabel!
     @IBOutlet weak var ExerciseName: UILabel!
     
-    @IBOutlet var BackgroundView: UIView!
+    @IBOutlet weak var BackgroundView: UIView!
     
     var welcomeArray = [String]()
     var ExerciseNameArray = [String]()
@@ -29,7 +30,7 @@ class ExerciseScreenViewController: UIViewController {
         super.viewDidLoad()
 
 //    Why does below break?
-//        self.BackgroundView.applyGradient1()
+//        self.BackgroundView.applyGradient0()
         
         //                Random Inspiring Message
         let welcomeArray = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!"]
@@ -67,11 +68,9 @@ class ExerciseScreenViewController: UIViewController {
         CurrentWorkoutCard.layer.cornerRadius = 5
         CurrentWorkoutCard.layer.borderWidth = 1
         CurrentWorkoutCard.layer.borderColor = UIColor.clear.cgColor
-        
-        
-        
-        
-        
+        CurrentWorkoutCard.layer.shadowRadius = 10
+        CurrentWorkoutCard.layer.shadowOpacity = 0.15
+        CurrentWorkoutCard.layer.shadowOffset = CGSize(width: 5, height: 5)
         
         
     }
@@ -166,6 +165,20 @@ class ExerciseScreenViewController: UIViewController {
             }, completion: nil)
         })
         
+        
+        UIView.animate(withDuration: 0.1, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.NextButtonOutlet.alpha = 1.0
+            self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+//            self.NextButtonOutlet.frame.origin.y = self.WorkoutWelcome.frame.origin.y-0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            //        Exit
+            UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+        })
+
         
     }
     
