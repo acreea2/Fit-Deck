@@ -7,57 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C7C9FE34839907362CF8FC507AD3608 /* CenteredCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF2B2EF522A94EB0A6FA9D4FCF5D3B4F /* CenteredCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63931E0CFE66798B16CB2C9F8AFAE9AB /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ECC189889EE5326BC9D4D258E33639 /* CenteredCollectionViewFlowLayout.swift */; };
-		7116EE0E6C009B22E3AB13246B483430 /* Pods-Workout Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0A10553F9EB3378D896F97446B18 /* Pods-Workout Cards-dummy.m */; };
-		858BCED64800957401D3FF0EF0584C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		B722FEC64B83E2AD5A18E13C75588E7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		C6C163CB69B6B19A6CB0C8FD64D5B9B5 /* CenteredCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D66476923231455D13D3436E947539 /* CenteredCollectionView-dummy.m */; };
-		DA0723A69DFB6037DD9C82B4E3C30B3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		DECBE4F14208843A6AD670147A29A2F2 /* Pods-Workout Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D44C89FB44753AF931B5F08F017C547F /* Pods-Workout Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7C9FE34839907362CF8FC507AD3608 /* CenteredCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD6583DF3F987EB00E98B876CED9709 /* CenteredCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A20A1A1936A1C5A7C5D0E48152BF46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		27B77236CCB1FB453761B9BBB71F6354 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		2FE9896E0530B1934347745C84E70F34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		3C4B87AECB4B48EFE963995BEB13C1F6 /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F82DBC7BCD5AF00A3DF57A0105CF0890 /* SAConfettiView-dummy.m */; };
+		63931E0CFE66798B16CB2C9F8AFAE9AB /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366842606C550E8EA418B781E5FFE43 /* CenteredCollectionViewFlowLayout.swift */; };
+		77DDD387E8C6C837CEC9B86A66996719 /* Pods-Workout Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D44C89FB44753AF931B5F08F017C547F /* Pods-Workout Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E72C3CE034C8976EB3B12B7AA65E03 /* Pods-Workout Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0A10553F9EB3378D896F97446B18 /* Pods-Workout Cards-dummy.m */; };
+		858BCED64800957401D3FF0EF0584C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		85A14178EDE40BDBE9F91CD383FA39DD /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B20136A1236ADD2F3025C954FF95FB9C /* SAConfettiView.bundle */; };
+		93AEE14A6732BD789B9077469F2DE4A1 /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A849D30809EAA656C3E9AC6E65DB8FF /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95F24FF73DCCFC1A2125A0D95460C49F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E2948A6033CECF3DD02AD4187A5347 /* star.png */; };
+		A2D58005031D7AD02B9AB2FE6FA74F55 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6E5C7873ED651CF4BA913A20DEBA67 /* triangle.png */; };
+		ADCA212772BF23D06ED5BBF92EAE7C15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
+		B002FE3452CDCF60B99C00B9A01D07C9 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F6EF48C40DF3FB9959678197623B7B /* diamond.png */; };
+		B85EAD0742AA14F65DDED36568ED8CC6 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE6C0F691EFFECECC7B2672E66A26C /* SAConfettiView.swift */; };
+		C6C163CB69B6B19A6CB0C8FD64D5B9B5 /* CenteredCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CF574AEE9B3AC6766B5DF4D045415C /* CenteredCollectionView-dummy.m */; };
+		D7A55F2AAC0733F46534684E52411A83 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0670B578CC13078AA6E7AFABAB7BD4 /* confetti.png */; };
+		DA0723A69DFB6037DD9C82B4E3C30B3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BC4F09BB7A8A9CB25DD1F8751F1911E /* PBXContainerItemProxy */ = {
+		2548523D950A38CC0646FD3FD864DA1C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A800CA1D6D5027709252893940F32FEA;
 			remoteInfo = CenteredCollectionView;
 		};
+		263C214ECE15068C19A785011AD9E185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF83468DDFCC30AD5B1E2C2FBA1CAD37;
+			remoteInfo = SAConfettiView;
+		};
+		604AC1556F65302F01FF35A7E33538CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 087C82113659E8A86D1AB2FC9E8F975F;
+			remoteInfo = "SAConfettiView-SAConfettiView";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D7C81A40269330C428AEC37D28C008 /* CenteredCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CenteredCollectionView.modulemap; sourceTree = "<group>"; };
 		0FDAAA2E86DC10FF25798867CAAD2CE9 /* Pods-Workout Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout Cards.debug.xcconfig"; sourceTree = "<group>"; };
-		1718F91C8734CA5DBABFC1D8EE31E5E1 /* CenteredCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CenteredCollectionView.xcconfig; sourceTree = "<group>"; };
-		341DDD7E72E2DFA02882F8F3B279E4E9 /* CenteredCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenteredCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
+		1BB601B9F82A034A073851A2C12384A8 /* Pods_Workout_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Workout_Cards.framework; path = "Pods-Workout Cards.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDE6C0F691EFFECECC7B2672E66A26C /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
+		28443FA490723E577D22BEACEBFE27A7 /* CenteredCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenteredCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		36E2948A6033CECF3DD02AD4187A5347 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
+		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3A849D30809EAA656C3E9AC6E65DB8FF /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
 		42B87F339F4BB2CD5541759E60E84252 /* Pods-Workout Cards-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Workout Cards-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49F6EF48C40DF3FB9959678197623B7B /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
+		4D0670B578CC13078AA6E7AFABAB7BD4 /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
+		51AE0780E2FEF64A383BD5F3D604CA5C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6366842606C550E8EA418B781E5FFE43 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenteredCollectionViewFlowLayout.swift; path = CenteredCollectionView/Classes/CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		69CF574AEE9B3AC6766B5DF4D045415C /* CenteredCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CenteredCollectionView-dummy.m"; sourceTree = "<group>"; };
+		6A24FEAB362FDAEEA257967B444B76FC /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
 		73F179DD701D3982D3AD06F0CCFE725D /* Pods-Workout Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout Cards.release.xcconfig"; sourceTree = "<group>"; };
 		7B68DE82697CA5651EABD52EBAC06E5B /* Pods-Workout Cards-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workout Cards-acknowledgements.plist"; sourceTree = "<group>"; };
+		7F43DF0DDCBB7AE5A81C0B0DE1AE4315 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90B33EDCF1B3BD3866AC7B150672AD52 /* Pods-Workout Cards-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout Cards-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AFF23D77B467E1B9916D80DE48DEA974 /* Pods-Workout Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Workout Cards.modulemap"; sourceTree = "<group>"; };
-		B035B550309C710D099A4684B91202B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4D66476923231455D13D3436E947539 /* CenteredCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CenteredCollectionView-dummy.m"; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BE84B01D3587DA8FAA778CDD78050913 /* Pods_Workout_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF2B2EF522A94EB0A6FA9D4FCF5D3B4F /* CenteredCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenteredCollectionView-umbrella.h"; sourceTree = "<group>"; };
-		C392852CD9DB8C9E2E5881D492914E00 /* CenteredCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CenteredCollectionView.modulemap; sourceTree = "<group>"; };
+		921E7C7A80EBA849FFFDEF8CC52BAFCF /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96A93B6C498FAE27304DF8FC3022B85A /* CenteredCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CenteredCollectionView.xcconfig; sourceTree = "<group>"; };
+		9FD6583DF3F987EB00E98B876CED9709 /* CenteredCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenteredCollectionView-umbrella.h"; sourceTree = "<group>"; };
+		AFF23D77B467E1B9916D80DE48DEA974 /* Pods-Workout Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Workout Cards.modulemap"; sourceTree = "<group>"; };
+		B20136A1236ADD2F3025C954FF95FB9C /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3E0A10553F9EB3378D896F97446B18 /* Pods-Workout Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Workout Cards-dummy.m"; sourceTree = "<group>"; };
-		D1ECC189889EE5326BC9D4D258E33639 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenteredCollectionViewFlowLayout.swift; path = CenteredCollectionView/Classes/CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44C89FB44753AF931B5F08F017C547F /* Pods-Workout Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workout Cards-umbrella.h"; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DEE6E92F40D0DAE4750A77D1A0BBF955 /* CenteredCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CenteredCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6E5C7873ED651CF4BA913A20DEBA67 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
+		DD6225706B75CDAD0800E3417B6F2204 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		DEC2172C09662012CE571E98460ABF8F /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ABFFD91E66403FFC638E90F9FB78AB /* Pods-Workout Cards-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout Cards-frameworks.sh"; sourceTree = "<group>"; };
+		F5EB75909D73F894B104B3D9E666FADD /* CenteredCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CenteredCollectionView.framework; path = CenteredCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82DBC7BCD5AF00A3DF57A0105CF0890 /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		FE0E203904A4B767A4AE16E9671F11C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		812E00E27C42823944D4A587448D3330 /* Frameworks */ = {
+		C2B252B4021A455077AAC7FBB2A4BFF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B722FEC64B83E2AD5A18E13C75588E7E /* Foundation.framework in Frameworks */,
+				14A20A1A1936A1C5A7C5D0E48152BF46 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,16 +110,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC8415B7599835EA93E45CA9DAEC2ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9ABB1197ED25DC5A9664E42E1FB21E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FE9896E0530B1934347745C84E70F34 /* Foundation.framework in Frameworks */,
+				ADCA212772BF23D06ED5BBF92EAE7C15 /* QuartzCore.framework in Frameworks */,
+				27B77236CCB1FB453761B9BBB71F6354 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03E17C6E397F84366E9A7E5288316382 /* CenteredCollectionView */ = {
+		0A121617D39DECBC3DED6DDFAB06668E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D1ECC189889EE5326BC9D4D258E33639 /* CenteredCollectionViewFlowLayout.swift */,
-				FEA49311F099666C86B6082E0F35EA7C /* Support Files */,
+				4D0670B578CC13078AA6E7AFABAB7BD4 /* confetti.png */,
+				49F6EF48C40DF3FB9959678197623B7B /* diamond.png */,
+				36E2948A6033CECF3DD02AD4187A5347 /* star.png */,
+				DC6E5C7873ED651CF4BA913A20DEBA67 /* triangle.png */,
 			);
-			path = CenteredCollectionView;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		136290541767656121B92D2229D80D16 /* Targets Support Files */ = {
@@ -90,49 +157,80 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		21620D9A3CFC7C2343F5D2A2FF4A574D /* SAConfettiView */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				1EDE6C0F691EFFECECC7B2672E66A26C /* SAConfettiView.swift */,
+				0A121617D39DECBC3DED6DDFAB06668E /* Resources */,
+				F1208B341BA2A6CEC6D5582531C90500 /* Support Files */,
 			);
-			name = Frameworks;
+			name = SAConfettiView;
+			path = SAConfettiView;
 			sourceTree = "<group>";
 		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+		28E6F3D63908EDD9310A07B71681548A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+				F5EB75909D73F894B104B3D9E666FADD /* CenteredCollectionView.framework */,
+				1BB601B9F82A034A073851A2C12384A8 /* Pods_Workout_Cards.framework */,
+				B20136A1236ADD2F3025C954FF95FB9C /* SAConfettiView.bundle */,
+				DEC2172C09662012CE571E98460ABF8F /* SAConfettiView.framework */,
 			);
-			name = iOS;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7401A5C6917305FB695F8DA22E193569 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				08D7C81A40269330C428AEC37D28C008 /* CenteredCollectionView.modulemap */,
+				96A93B6C498FAE27304DF8FC3022B85A /* CenteredCollectionView.xcconfig */,
+				69CF574AEE9B3AC6766B5DF4D045415C /* CenteredCollectionView-dummy.m */,
+				28443FA490723E577D22BEACEBFE27A7 /* CenteredCollectionView-prefix.pch */,
+				9FD6583DF3F987EB00E98B876CED9709 /* CenteredCollectionView-umbrella.h */,
+				51AE0780E2FEF64A383BD5F3D604CA5C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CenteredCollectionView";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				BA533734A909274AAD8558F77BDB7E7B /* Pods */,
-				89857F757AE1AA7878025FF7DC97E535 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				D5BCD6AE25A63606EAF8D006DD159743 /* Pods */,
+				28E6F3D63908EDD9310A07B71681548A /* Products */,
 				136290541767656121B92D2229D80D16 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		89857F757AE1AA7878025FF7DC97E535 /* Products */ = {
+		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				DEE6E92F40D0DAE4750A77D1A0BBF955 /* CenteredCollectionView.framework */,
-				BE84B01D3587DA8FAA778CDD78050913 /* Pods_Workout_Cards.framework */,
+				33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */,
+				FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */,
+				3917A50EB224EEDBC66971700D698782 /* UIKit.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BA533734A909274AAD8558F77BDB7E7B /* Pods */ = {
+		D5BCD6AE25A63606EAF8D006DD159743 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				03E17C6E397F84366E9A7E5288316382 /* CenteredCollectionView */,
+				E05171FDB7C5C69C9D796DF34ABBE512 /* CenteredCollectionView */,
+				21620D9A3CFC7C2343F5D2A2FF4A574D /* SAConfettiView */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E05171FDB7C5C69C9D796DF34ABBE512 /* CenteredCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				6366842606C550E8EA418B781E5FFE43 /* CenteredCollectionViewFlowLayout.swift */,
+				7401A5C6917305FB695F8DA22E193569 /* Support Files */,
+			);
+			name = CenteredCollectionView;
+			path = CenteredCollectionView;
 			sourceTree = "<group>";
 		};
 		E4712A03980EFB3200062525DE545855 /* Pods-Workout Cards */ = {
@@ -153,23 +251,32 @@
 			path = "Target Support Files/Pods-Workout Cards";
 			sourceTree = "<group>";
 		};
-		FEA49311F099666C86B6082E0F35EA7C /* Support Files */ = {
+		F1208B341BA2A6CEC6D5582531C90500 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C392852CD9DB8C9E2E5881D492914E00 /* CenteredCollectionView.modulemap */,
-				1718F91C8734CA5DBABFC1D8EE31E5E1 /* CenteredCollectionView.xcconfig */,
-				B4D66476923231455D13D3436E947539 /* CenteredCollectionView-dummy.m */,
-				341DDD7E72E2DFA02882F8F3B279E4E9 /* CenteredCollectionView-prefix.pch */,
-				BF2B2EF522A94EB0A6FA9D4FCF5D3B4F /* CenteredCollectionView-umbrella.h */,
-				B035B550309C710D099A4684B91202B9 /* Info.plist */,
+				7F43DF0DDCBB7AE5A81C0B0DE1AE4315 /* Info.plist */,
+				6A24FEAB362FDAEEA257967B444B76FC /* ResourceBundle-SAConfettiView-Info.plist */,
+				921E7C7A80EBA849FFFDEF8CC52BAFCF /* SAConfettiView.modulemap */,
+				1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */,
+				F82DBC7BCD5AF00A3DF57A0105CF0890 /* SAConfettiView-dummy.m */,
+				DD6225706B75CDAD0800E3417B6F2204 /* SAConfettiView-prefix.pch */,
+				3A849D30809EAA656C3E9AC6E65DB8FF /* SAConfettiView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CenteredCollectionView";
+			path = "../Target Support Files/SAConfettiView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0C9654A488FA0524240A4D0D5C630DFE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DDD387E8C6C837CEC9B86A66996719 /* Pods-Workout Cards-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3E7D535AAE44BEDF519E3E6D49C5F1F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,33 +285,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B9FD025D0C357BE034B5D76E992438C /* Headers */ = {
+		B80B3A087CB99473A429792ACD8AF799 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECBE4F14208843A6AD670147A29A2F2 /* Pods-Workout Cards-umbrella.h in Headers */,
+				93AEE14A6732BD789B9077469F2DE4A1 /* SAConfettiView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9C3C23440609A9BDE5D6B06FB2FBF5BF /* Pods-Workout Cards */ = {
+		087C82113659E8A86D1AB2FC9E8F975F /* SAConfettiView-SAConfettiView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F29DE02189E69C323DA8F161A4D05DD /* Build configuration list for PBXNativeTarget "Pods-Workout Cards" */;
+			buildConfigurationList = 1E500B9268524227EA64853FDF3FB1D8 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
 			buildPhases = (
-				A6B1575044DA1BD5EFAF34057311BF36 /* Sources */,
-				812E00E27C42823944D4A587448D3330 /* Frameworks */,
-				8B9FD025D0C357BE034B5D76E992438C /* Headers */,
+				98FBB187BB3FCBBF74DD7E82BE34E34B /* Sources */,
+				EC8415B7599835EA93E45CA9DAEC2ACF /* Frameworks */,
+				5A627A051B5BB58622288438EC923FC1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D3D8678BF2F68DAB27BF45E4299BF8A /* PBXTargetDependency */,
+			);
+			name = "SAConfettiView-SAConfettiView";
+			productName = "SAConfettiView-SAConfettiView";
+			productReference = B20136A1236ADD2F3025C954FF95FB9C /* SAConfettiView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3C56400B1C0D62435B5D37E5BCAEDE2C /* Pods-Workout Cards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E717A5C43E6CF5C815A7F30546E1EE7 /* Build configuration list for PBXNativeTarget "Pods-Workout Cards" */;
+			buildPhases = (
+				5F7D99F0F0B1A13AD70DE64A2120C576 /* Sources */,
+				C2B252B4021A455077AAC7FBB2A4BFF0 /* Frameworks */,
+				0C9654A488FA0524240A4D0D5C630DFE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B270E2AA134173BCABD8333CD6B0202B /* PBXTargetDependency */,
+				798D8B43A0FE145EB7D909013E757BD6 /* PBXTargetDependency */,
 			);
 			name = "Pods-Workout Cards";
 			productName = "Pods-Workout Cards";
-			productReference = BE84B01D3587DA8FAA778CDD78050913 /* Pods_Workout_Cards.framework */;
+			productReference = 1BB601B9F82A034A073851A2C12384A8 /* Pods_Workout_Cards.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A800CA1D6D5027709252893940F32FEA /* CenteredCollectionView */ = {
@@ -221,7 +346,26 @@
 			);
 			name = CenteredCollectionView;
 			productName = CenteredCollectionView;
-			productReference = DEE6E92F40D0DAE4750A77D1A0BBF955 /* CenteredCollectionView.framework */;
+			productReference = F5EB75909D73F894B104B3D9E666FADD /* CenteredCollectionView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF83468DDFCC30AD5B1E2C2FBA1CAD37 /* SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33946DB0AF66A1B02B08BFFD456C9B04 /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
+			buildPhases = (
+				95EF45183414D90069A0D471CBE8B026 /* Sources */,
+				FB9ABB1197ED25DC5A9664E42E1FB21E /* Frameworks */,
+				26C40E90F7B73744D4D0DFD613132545 /* Resources */,
+				B80B3A087CB99473A429792ACD8AF799 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F5AB08DBD0A90A7F53A4FB7CC1D5D72 /* PBXTargetDependency */,
+			);
+			name = SAConfettiView;
+			productName = SAConfettiView;
+			productReference = DEC2172C09662012CE571E98460ABF8F /* SAConfettiView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -241,17 +385,49 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 89857F757AE1AA7878025FF7DC97E535 /* Products */;
+			productRefGroup = 28E6F3D63908EDD9310A07B71681548A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A800CA1D6D5027709252893940F32FEA /* CenteredCollectionView */,
-				9C3C23440609A9BDE5D6B06FB2FBF5BF /* Pods-Workout Cards */,
+				3C56400B1C0D62435B5D37E5BCAEDE2C /* Pods-Workout Cards */,
+				CF83468DDFCC30AD5B1E2C2FBA1CAD37 /* SAConfettiView */,
+				087C82113659E8A86D1AB2FC9E8F975F /* SAConfettiView-SAConfettiView */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		26C40E90F7B73744D4D0DFD613132545 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A14178EDE40BDBE9F91CD383FA39DD /* SAConfettiView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A627A051B5BB58622288438EC923FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A55F2AAC0733F46534684E52411A83 /* confetti.png in Resources */,
+				B002FE3452CDCF60B99C00B9A01D07C9 /* diamond.png in Resources */,
+				95F24FF73DCCFC1A2125A0D95460C49F /* star.png in Resources */,
+				A2D58005031D7AD02B9AB2FE6FA74F55 /* triangle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5F7D99F0F0B1A13AD70DE64A2120C576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E72C3CE034C8976EB3B12B7AA65E03 /* Pods-Workout Cards-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82024BE2717F317FE4B5286AA1ED553B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,27 +437,132 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6B1575044DA1BD5EFAF34057311BF36 /* Sources */ = {
+		95EF45183414D90069A0D471CBE8B026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7116EE0E6C009B22E3AB13246B483430 /* Pods-Workout Cards-dummy.m in Sources */,
+				3C4B87AECB4B48EFE963995BEB13C1F6 /* SAConfettiView-dummy.m in Sources */,
+				B85EAD0742AA14F65DDED36568ED8CC6 /* SAConfettiView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98FBB187BB3FCBBF74DD7E82BE34E34B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D3D8678BF2F68DAB27BF45E4299BF8A /* PBXTargetDependency */ = {
+		798D8B43A0FE145EB7D909013E757BD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SAConfettiView;
+			target = CF83468DDFCC30AD5B1E2C2FBA1CAD37 /* SAConfettiView */;
+			targetProxy = 263C214ECE15068C19A785011AD9E185 /* PBXContainerItemProxy */;
+		};
+		8F5AB08DBD0A90A7F53A4FB7CC1D5D72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SAConfettiView-SAConfettiView";
+			target = 087C82113659E8A86D1AB2FC9E8F975F /* SAConfettiView-SAConfettiView */;
+			targetProxy = 604AC1556F65302F01FF35A7E33538CF /* PBXContainerItemProxy */;
+		};
+		B270E2AA134173BCABD8333CD6B0202B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CenteredCollectionView;
 			target = A800CA1D6D5027709252893940F32FEA /* CenteredCollectionView */;
-			targetProxy = 2BC4F09BB7A8A9CB25DD1F8751F1911E /* PBXContainerItemProxy */;
+			targetProxy = 2548523D950A38CC0646FD3FD864DA1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2111AC0F40D0A7E691D1C368D945A368 /* Debug */ = {
+		02AEDDE6A695E8C9214A7E653BAD8D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		2F6563696413EFE6F393081EA195B4AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37D5B3CDD4435795AD39A78FEEBA0C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A93B6C498FAE27304DF8FC3022B85A /* CenteredCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CenteredCollectionView/CenteredCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CenteredCollectionView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CenteredCollectionView/CenteredCollectionView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CenteredCollectionView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42CED572FDCD394306690C431735C068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FDAAA2E86DC10FF25798867CAAD2CE9 /* Pods-Workout Cards.debug.xcconfig */;
 			buildSettings = {
@@ -319,78 +600,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		250195C86CF1FAE7A86307DE9C9E44A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73F179DD701D3982D3AD06F0CCFE725D /* Pods-Workout Cards.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Workout Cards/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Workout Cards/Pods-Workout Cards.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Workout_Cards;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		37D5B3CDD4435795AD39A78FEEBA0C31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1718F91C8734CA5DBABFC1D8EE31E5E1 /* CenteredCollectionView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CenteredCollectionView/CenteredCollectionView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CenteredCollectionView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CenteredCollectionView/CenteredCollectionView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CenteredCollectionView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -440,6 +649,96 @@
 			};
 			name = Debug;
 		};
+		964D683A76E113918B7E984474776D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1A27E4223B20C32BFF0DBF723A3CA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F179DD701D3982D3AD06F0CCFE725D /* Pods-Workout Cards.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout Cards/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout Cards/Pods-Workout Cards.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_Cards;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B91D536064883BC7664AD47BDAF8F26C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B267F51F865A97236CB780953BAD0DF /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,7 +785,7 @@
 		};
 		FF480B7A02CA6651A960B2FDD5E484A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1718F91C8734CA5DBABFC1D8EE31E5E1 /* CenteredCollectionView.xcconfig */;
+			baseConfigurationReference = 96A93B6C498FAE27304DF8FC3022B85A /* CenteredCollectionView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -522,11 +821,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E500B9268524227EA64853FDF3FB1D8 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B91D536064883BC7664AD47BDAF8F26C /* Debug */,
+				02AEDDE6A695E8C9214A7E653BAD8D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
 				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33946DB0AF66A1B02B08BFFD456C9B04 /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				964D683A76E113918B7E984474776D0D /* Debug */,
+				2F6563696413EFE6F393081EA195B4AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -540,11 +857,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F29DE02189E69C323DA8F161A4D05DD /* Build configuration list for PBXNativeTarget "Pods-Workout Cards" */ = {
+		9E717A5C43E6CF5C815A7F30546E1EE7 /* Build configuration list for PBXNativeTarget "Pods-Workout Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2111AC0F40D0A7E691D1C368D945A368 /* Debug */,
-				250195C86CF1FAE7A86307DE9C9E44A1 /* Release */,
+				42CED572FDCD394306690C431735C068 /* Debug */,
+				A1A27E4223B20C32BFF0DBF723A3CA92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

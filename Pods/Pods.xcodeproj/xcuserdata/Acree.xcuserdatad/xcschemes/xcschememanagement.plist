@@ -14,15 +14,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SAConfettiView-SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9C3C23440609A9BDE5D6B06FB2FBF5BF</key>
+		<key>087C82113659E8A86D1AB2FC9E8F975F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C56400B1C0D62435B5D37E5BCAEDE2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A800CA1D6D5027709252893940F32FEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF83468DDFCC30AD5B1E2C2FBA1CAD37</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,12 +1,15 @@
 PODS:
   - CenteredCollectionView (1.0)
+  - SAConfettiView (0.1.8)
 
 DEPENDENCIES:
   - CenteredCollectionView
+  - SAConfettiView
 
 SPEC CHECKSUMS:
   CenteredCollectionView: ac9c4d8a22abe9d108ff4d7dac135dd73f9a5516
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
 
-PODFILE CHECKSUM: fff1f98a1988c7e22c90c9b864f96fb16d949013
+PODFILE CHECKSUM: 28681bb9177a5093612c4b70d019d8ed9d3ab370
 
 COCOAPODS: 1.2.1
