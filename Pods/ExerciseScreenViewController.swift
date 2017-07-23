@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+//import SAConfettiView
 
 class ExerciseScreenViewController: UIViewController {
     
@@ -33,6 +32,8 @@ class ExerciseScreenViewController: UIViewController {
     // Public
     //    var Library: ExerciseLibrary?
     
+//    var SAConfettiView: SAConfettiView?
+    
     var exerciseStepCount = 1
     
     //    Create Options
@@ -47,6 +48,11 @@ class ExerciseScreenViewController: UIViewController {
     
     
     let ExerciseExitArray = ["My core is sore just from watching!", "Great Job!", "You made it!", "You look like a pro.", "I think I'm starting to see some abs.", "You just burned like 100,000 calores."]
+    
+    
+//      ** Confetti
+    
+
     
     
     //      Create Goal
@@ -213,6 +219,9 @@ class ExerciseScreenViewController: UIViewController {
         if exerciseStepCount == WorkoutEnd {
             print("Goal Get Ready To Exit")
             
+            
+//            SAConfettiView!.startConfetti()
+            
             self.WorkoutWelcome.text = ExerciseExitArray.randomItem()
             
             
@@ -324,8 +333,28 @@ class ExerciseScreenViewController: UIViewController {
         
     }
     
+ 
+//    
+//    func setUpConfetti() {
+//        let confettiView = SAConfettiView(frame: self.view.bounds)
+//        self.view.addSubview(confettiView)
+//    }
+//    
+//    
+//    func startConfetti() {
+//        startConfetti()
+//        
+//    }
+//    
+//    func stopConfetti() {
+//        stopConfetti()
+//    }
+//    
+    
     
 }
+
+
 
 
 
