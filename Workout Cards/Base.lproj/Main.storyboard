@@ -290,6 +290,7 @@
                                 </state>
                                 <connections>
                                     <action selector="NextButtonTapped:" destination="FSz-kR-xSr" eventType="touchUpInside" id="gJc-rP-iTH"/>
+                                    <action selector="NextButtonTouchDown:" destination="FSz-kR-xSr" eventType="touchDown" id="5Rw-HV-ait"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZX-cl-tGa">
@@ -450,6 +451,12 @@
                                     <constraint firstItem="WcN-gj-Egz" firstAttribute="top" secondItem="99F-rv-I2I" secondAttribute="top" constant="24" id="ywb-Cb-fdQ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4M-XX-GUK" userLabel="ActivityCounter">
+                                <rect key="frame" x="166" y="108.5" width="43" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22561690209999999" green="0.83685165640000003" blue="0.83105760809999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -457,11 +464,13 @@
                             <constraint firstItem="DCG-RO-cdO" firstAttribute="centerX" secondItem="ynG-fK-V1p" secondAttribute="centerX" id="0pf-uL-vY8"/>
                             <constraint firstItem="VTr-L8-BEZ" firstAttribute="top" secondItem="hEE-UJ-t6c" secondAttribute="bottom" constant="16" id="111-gq-pEW"/>
                             <constraint firstItem="99F-rv-I2I" firstAttribute="centerX" secondItem="ynG-fK-V1p" secondAttribute="centerX" id="1lp-NJ-8JA"/>
+                            <constraint firstItem="N4M-XX-GUK" firstAttribute="top" secondItem="Wt2-sC-AwE" secondAttribute="bottom" constant="8" id="3CJ-nA-QSA"/>
                             <constraint firstItem="8yv-d3-u32" firstAttribute="top" secondItem="99F-rv-I2I" secondAttribute="bottom" constant="32" id="8Ad-Lo-K7O"/>
                             <constraint firstItem="Wt2-sC-AwE" firstAttribute="top" secondItem="hEE-UJ-t6c" secondAttribute="bottom" constant="48" id="BfC-e6-5Xy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="99F-rv-I2I" secondAttribute="trailing" constant="32" id="EPB-sx-rMm"/>
                             <constraint firstItem="DCG-RO-cdO" firstAttribute="centerY" secondItem="ynG-fK-V1p" secondAttribute="centerY" id="KsV-d2-LOk"/>
                             <constraint firstItem="VTr-L8-BEZ" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leading" constant="16" id="Mgb-U3-nog"/>
+                            <constraint firstItem="N4M-XX-GUK" firstAttribute="centerX" secondItem="ynG-fK-V1p" secondAttribute="centerX" id="Y74-6S-DjP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wt2-sC-AwE" secondAttribute="trailing" constant="32" id="dSK-SS-qGk"/>
                             <constraint firstItem="Wt2-sC-AwE" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leadingMargin" constant="32" id="fkS-ID-Qre"/>
                             <constraint firstItem="99F-rv-I2I" firstAttribute="top" secondItem="Wt2-sC-AwE" secondAttribute="bottom" constant="48" id="hU5-kp-8gx"/>
@@ -472,6 +481,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ActivityCounterLabel" destination="N4M-XX-GUK" id="4os-fa-MPJ"/>
+                        <outlet property="BackButtonOutlet" destination="VTr-L8-BEZ" id="GbK-sl-5ta"/>
                         <outlet property="CurrentWorkoutCard" destination="99F-rv-I2I" id="TEs-U7-QiG"/>
                         <outlet property="ExerciseName" destination="qyz-gx-ERa" id="i5k-pU-9LW"/>
                         <outlet property="ExerciseNumber" destination="WcN-gj-Egz" id="7nv-5O-f2v"/>
