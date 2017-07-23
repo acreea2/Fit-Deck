@@ -16,10 +16,7 @@ class FourCardHomeViewController: UIViewController {
     @IBOutlet weak var Card3: UIView!
     @IBOutlet weak var Card4: UIView!
     
-    
-    
-    
-    
+    @IBOutlet weak var totalExerciseCount: UILabel!
     
     let color1a = UIColor(rgb: 0x4FE18A)
     let color1b = UIColor(rgb: 0x34CECA)
@@ -45,8 +42,6 @@ class FourCardHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         
     //        Card Intros
@@ -83,7 +78,7 @@ class FourCardHomeViewController: UIViewController {
         
         
         
-        
+        // Corner Radius + Gradient
         Card1.layer.cornerRadius = 10
         Card1.layer.borderWidth = 1
         Card1.layer.borderColor = UIColor.clear.cgColor
@@ -105,6 +100,8 @@ class FourCardHomeViewController: UIViewController {
         Card4.layer.borderColor = UIColor.clear.cgColor
         Card4.applyGradient4()
     
+//        self.totalExerciseCount.text = MyVariables.exerciseStepCount
+        
     }
     
     
