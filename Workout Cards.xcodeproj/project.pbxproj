@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		463C046A1F1AF1B2004F44B2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463C04691F1AF1B2004F44B2 /* SecondViewController.swift */; };
 		463C04701F1B04FF004F44B2 /* FourCardHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463C046F1F1B04FF004F44B2 /* FourCardHomeViewController.swift */; };
+		46866E3B1F2623B900A8C448 /* CardioExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46866E3A1F2623B900A8C448 /* CardioExercises.swift */; };
 		46A37BB11F1BFE5000963B9F /* ExerciseLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A37BB01F1BFE5000963B9F /* ExerciseLibrary.swift */; };
 		46A37BB51F1C002400963B9F /* ExerciseScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A37BB41F1C002400963B9F /* ExerciseScreenViewController.swift */; };
 		46A37BB91F1C00A800963B9F /* ArmsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A37BB81F1C00A800963B9F /* ArmsExercises.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		463C04691F1AF1B2004F44B2 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		463C046F1F1B04FF004F44B2 /* FourCardHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourCardHomeViewController.swift; sourceTree = "<group>"; };
+		46866E3A1F2623B900A8C448 /* CardioExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardioExercises.swift; sourceTree = "<group>"; };
 		46A37BB01F1BFE5000963B9F /* ExerciseLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseLibrary.swift; sourceTree = "<group>"; };
 		46A37BB41F1C002400963B9F /* ExerciseScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseScreenViewController.swift; path = ../Pods/ExerciseScreenViewController.swift; sourceTree = "<group>"; };
 		46A37BB81F1C00A800963B9F /* ArmsExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmsExercises.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				46CA0A6A1DFF80EB0018786C /* Main.storyboard */,
 				46A37BB41F1C002400963B9F /* ExerciseScreenViewController.swift */,
 				46A37BB81F1C00A800963B9F /* ArmsExercises.swift */,
+				46866E3A1F2623B900A8C448 /* CardioExercises.swift */,
 				46A37BB01F1BFE5000963B9F /* ExerciseLibrary.swift */,
 				46F0B06C1F1C083000A71F5A /* Styles */,
 				463C046F1F1B04FF004F44B2 /* FourCardHomeViewController.swift */,
@@ -240,6 +243,7 @@
 			files = (
 				46A37BB51F1C002400963B9F /* ExerciseScreenViewController.swift in Sources */,
 				463C04701F1B04FF004F44B2 /* FourCardHomeViewController.swift in Sources */,
+				46866E3B1F2623B900A8C448 /* CardioExercises.swift in Sources */,
 				463C046A1F1AF1B2004F44B2 /* SecondViewController.swift in Sources */,
 				46A37BB91F1C00A800963B9F /* ArmsExercises.swift in Sources */,
 				46F0B06E1F1C086100A71F5A /* UI_Gradients.swift in Sources */,

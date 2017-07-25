@@ -1,15 +1,15 @@
 //
 //  ExerciseScreenViewController.swift
-//  CORE
+//  CARDIO
 //
 //  Created by Andrew Acree on 7/15/17.
 //
 //
 
 import UIKit
-//import SAConfettiView
+import SAConfettiView
 
-class ExerciseScreenViewController: UIViewController {
+class CardioScreenViewController: UIViewController {
     
     
     @IBOutlet weak var WorkoutWelcome: UILabel!
@@ -32,27 +32,25 @@ class ExerciseScreenViewController: UIViewController {
     // Public
     //    var Library: ExerciseLibrary?
     
-//    var SAConfettiView: SAConfettiView?
+        var confettiView: SAConfettiView?
     
     var exerciseStepCount = 1
     
     //    Create Options
-    let welcomeArray = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!", "Let's get to it!"]
+    let welcomeArray2 = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!", "Let's get to it!", "Get your arms ready!"]
     
-    let ExerciseNameArray = ["Jumping Jacks", "High Knees", "Mountain Climbers", "Burpees"]
+    let ExerciseNameArray2 = ["Push Ups", "Dips", "Dive Bombers", "Inchworms"]
     
-    let ExerciseNumberArray = ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+    let ExerciseNumberArray2 = ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
     
     var BothNumbers = ""
     
+    let ExerciseExitArray2 = ["Great job! Now just don't drop your phone.", "You made it!", "You made those look easy.", "You just burned like 100,000 calores."]
     
     
-    let ExerciseExitArray = ["My core is sore just from watching!", "Great Job!", "You made it!", "You look like a pro.", "I think I'm starting to see some abs.", "You just burned like 100,000 calores."]
+    //      ** Confetti
     
     
-//      ** Confetti
-    
-
     
     
     //      Create Goal
@@ -82,9 +80,9 @@ class ExerciseScreenViewController: UIViewController {
         
         
         func CardUpdateAll() {
-            self.WorkoutWelcome.text = welcomeArray.randomItem()
-            self.ExerciseName.text = ExerciseNameArray.randomItem()
-            self.BothNumbers = ExerciseNumberArray.randomItem()
+            self.WorkoutWelcome.text = welcomeArray2.randomItem()
+            self.ExerciseName.text = ExerciseNameArray2.randomItem()
+            self.BothNumbers = ExerciseNumberArray2.randomItem()
             self.ExerciseNumber.text = BothNumbers
             self.ExerciseNumber2.text = BothNumbers
             //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
@@ -218,11 +216,15 @@ class ExerciseScreenViewController: UIViewController {
         //      When Goal is reached
         if exerciseStepCount == WorkoutEnd {
             print("Goal Get Ready To Exit")
+
+            confettiView = SAConfettiView(frame: self.view.frame)
+            
+            self.view.insertSubview(confettiView!, aboveSubview: self.view)
+            confettiView?.startConfetti()
+            print("Confetti Start")
             
             
-//            SAConfettiView!.startConfetti()
-            
-            self.WorkoutWelcome.text = ExerciseExitArray.randomItem()
+            self.WorkoutWelcome.text = ExerciseExitArray2.randomItem()
             
             
             //      Fade Card Out
@@ -234,7 +236,7 @@ class ExerciseScreenViewController: UIViewController {
                 options: UIViewAnimationOptions.curveEaseIn, animations: {
                     self.CurrentWorkoutCard.alpha = 0.0
                     self.CurrentWorkoutCard.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//                    self.CurrentWorkoutCard.frame.origin.y = self.CurrentWorkoutCard.frame.origin.y+800
+                    //                    self.CurrentWorkoutCard.frame.origin.y = self.CurrentWorkoutCard.frame.origin.y+800
                     self.CurrentWorkoutCard?.layoutIfNeeded()
                     
                     self.BackButtonOutlet.alpha = 0.0
@@ -255,7 +257,7 @@ class ExerciseScreenViewController: UIViewController {
             
             
             delayWithSeconds(3.0) {
-                        self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
         
@@ -265,9 +267,9 @@ class ExerciseScreenViewController: UIViewController {
         
         if exerciseStepCount != WorkoutEnd {
             func CardUpdateAll() {
-                self.WorkoutWelcome.text = welcomeArray.randomItem()
-                self.ExerciseName.text = ExerciseNameArray.randomItem()
-                self.BothNumbers = ExerciseNumberArray.randomItem()
+                self.WorkoutWelcome.text = welcomeArray2.randomItem()
+                self.ExerciseName.text = ExerciseNameArray2.randomItem()
+                self.BothNumbers = ExerciseNumberArray2.randomItem()
                 self.ExerciseNumber.text = BothNumbers
                 self.ExerciseNumber2.text = BothNumbers
                 
@@ -333,23 +335,23 @@ class ExerciseScreenViewController: UIViewController {
         
     }
     
- 
-//    
-//    func setUpConfetti() {
-//        let confettiView = SAConfettiView(frame: self.view.bounds)
-//        self.view.addSubview(confettiView)
-//    }
-//    
-//    
-//    func startConfetti() {
-//        startConfetti()
-//        
-//    }
-//    
-//    func stopConfetti() {
-//        stopConfetti()
-//    }
-//    
+    
+    //
+    //    func setUpConfetti() {
+    //        let confettiView = SAConfettiView(frame: self.view.bounds)
+    //        self.view.addSubview(confettiView)
+    //    }
+    //
+    //
+    //    func startConfetti() {
+    //        startConfetti()
+    //
+    //    }
+    //
+    //    func stopConfetti() {
+    //        stopConfetti()
+    //    }
+    //
     
     
 }
@@ -359,12 +361,12 @@ class ExerciseScreenViewController: UIViewController {
 
 
 
-//extension Array {
-//    func randomItem() -> Element {
-//        let index = Int(arc4random_uniform(UInt32(self.count)))
-//        return self[index]
-//    }
-//}
+extension Array {
+    func randomItem() -> Element {
+        let index = Int(arc4random_uniform(UInt32(self.count)))
+        return self[index]
+    }
+}
 
 
 

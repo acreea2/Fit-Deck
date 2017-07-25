@@ -9,47 +9,48 @@
 import Foundation
 import UIKit
 
-open class ExerciseLibrary: NSObject {
+open class ExerciseLibrary {
     
     
-    var Greeting:String
-    init(Greeting:String){
-        self.Greeting = Greeting
-    }
     
-    var exerciseStepCount = 0
+//    var Greeting:String
+//    init(Greeting:String){
+//        self.Greeting = Greeting
+//    }
+    
+static var exerciseStepCount = 0
 //    var testVariable: String
 
 //    static let testVariable: String = "name"
-    var testVariable = "Tester"    
+static var testVariable = "Tester"    
 
     
 
 // ** Cardio **
-let welcomeArray1 = ["Ready to sweat?!!!", "You can do it!!!!", "Harder, Better, Faster, Stronger!!!", "Here we go!!!!", "Let's do this!!!!"]
+static let welcomeArray1 = ["Ready to sweat?!!!", "You can do it!!!!", "Harder, Better, Faster, Stronger!!!", "Here we go!!!!", "Let's do this!!!!"]
 //        Greeting: = welcomeArray1.randomItem()
 
-let ExerciseNameArray1 = ["Mountain Climbers", "Crunches", "Bicycles", "Toe Touches"]
+static let ExerciseNameArray1 = ["Mountain Climbers", "Crunches", "Bicycles", "Toe Touches"]
 //        self.ExerciseName.text = ExerciseNameArray.randomItem()
 
-let ExerciseNumberArray1 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
+static let ExerciseNumberArray1 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
 //        self.ExerciseNumber.text = ExerciseNumberArray.randomItem()
 
 
 
 // ** Arms **
-let welcomeArray2 = ["Lets get cut", "Hope you can work tomorrow", "Push that earth down"]
+static let welcomeArray2 = ["Lets get cut", "Hope you can work tomorrow", "Push that earth down"]
 //        self.WorkoutWelcome.text = welcomeArray1.randomItem()
 
-let ExerciseNameArray2 = ["Pushups", "Dips", "Jumping Jacks", "Bombers"]
+static let ExerciseNameArray2 = ["Pushups", "Dips", "Jumping Jacks", "Bombers"]
 //        self.ExerciseName.text = ExerciseNameArray.randomItem()
 
-let ExerciseNumberArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
+static let ExerciseNumberArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
 //        self.ExerciseNumber.text = ExerciseNumberArray.randomItem()
 
 }
 
-var mainInstance = ExerciseLibrary(Greeting:"welc")
+//var mainInstance = ExerciseLibrary(Greeting:"welc")
 
 
 open class WorkoutDictionary: NSObject {
