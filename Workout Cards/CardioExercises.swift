@@ -30,31 +30,23 @@ class CardioScreenViewController: UIViewController {
     
     // Data Properties
     // Public
-    //    var Library: ExerciseLibrary?
-    
     var confettiView: SAConfettiView?
     
-    var exerciseStepCount = 1
     
-    //    Create Options
-    //    let welcomeArray2 = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!", "Let's get to it!", "Get your arms ready!"]
-    //
-    //    let ExerciseNameArray2 = ["Push Ups", "Dips", "Dive Bombers", "Inchworms"]
-    //
-    //    let ExerciseNumberArray2 = ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
-    //
-    //    let ExerciseExitArray2 = ["Great job! Now just don't drop your phone.", "You made it!", "You made those look easy.", "You just burned like 100,000 calores."]
+    var exerciseStepCount = 1
     
     
     var BothNumbers = ""
     
     
-    
+    let library = ExerciseLibrary()
     
     //      Create Goal
     var WorkoutEnd = 10
     
     
+    
+    //      Functions
     //      Create Delay
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -62,40 +54,47 @@ class CardioScreenViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func LastCard() {
+//        if exerciseStepCount == WorkoutEnd {
+            confettiView = SAConfettiView(frame: self.view.frame)
+            self.WorkoutWelcome.text = library.ExerciseExitArray3.randomItem()
         
-        let library = ExerciseLibrary()
-        
-        var exercise = "cardio"
-        
-        //      Why does below break?
-        //      BackgroundView.applyGradient01()
-        
-        //                Random Inspiring Message
-        
-        //    self.WorkoutWelcome.text = mainInstance.Greeting
-        //        print(mainInstance.Greeting)
-        
-        //      Setting first randoms
-        
-        
-        
-        func CardUpdateAll() {
-            self.WorkoutWelcome.text = library.WelcomeArrayCore.randomItem()
-            self.ExerciseName.text = library.ExerciseNameArrayCore.randomItem()
-            self.BothNumbers = library.ExerciseNumberArrayCore.randomItem()
+            self.view.insertSubview(confettiView!, aboveSubview: self.view)
+            confettiView?.startConfetti()
+            print("Confetti Start")
+            
+//        }
+    }
+    
+    func CardUpdateAll(){
+//        if exerciseStepCount != WorkoutEnd  {
+            print("draw card + \(exerciseStepCount)")
+            self.WorkoutWelcome.text = library.WelcomeArray3.randomItem()
+            self.ExerciseName.text = library.ExerciseNameArray3.randomItem()
+            self.BothNumbers = library.ExerciseNumberArray3.randomItem()
             self.ExerciseNumber.text = BothNumbers
             self.ExerciseNumber2.text = BothNumbers
             //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
             self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-            print("draw card")
-        }
+            exerciseStepCount += 1
+            
+//        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+//      How to send back to library ?
+//        var exercise = "cardio"
+        
+        //      Why does below break?
+        //      BackgroundView.applyGradient01()
+        
+        
+
         //      Initial Card Update
         CardUpdateAll()
-        
-        
-        
         
         
         //        Intro Message Setting
@@ -179,17 +178,6 @@ class CardioScreenViewController: UIViewController {
         }, completion: {
             (finished: Bool) -> Void in
         })
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
     } // View Did Appear End
     
     
@@ -223,18 +211,9 @@ class CardioScreenViewController: UIViewController {
         
         
         //      When Goal is reached
-        if exerciseStepCount == WorkoutEnd {
+        if exerciseStepCount > WorkoutEnd {
             print("Goal Get Ready To Exit")
-            
-            confettiView = SAConfettiView(frame: self.view.frame)
-            
-            self.view.insertSubview(confettiView!, aboveSubview: self.view)
-            confettiView?.startConfetti()
-            print("Confetti Start")
-            
-            
-            //            self.WorkoutWelcome.text = ExerciseExitArray2.randomItem()
-            
+            LastCard()
             
             //      Fade Card Out
             UIView.animate(
@@ -247,11 +226,8 @@ class CardioScreenViewController: UIViewController {
                     self.CurrentWorkoutCard.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
                     //                    self.CurrentWorkoutCard.frame.origin.y = self.CurrentWorkoutCard.frame.origin.y+800
                     self.CurrentWorkoutCard?.layoutIfNeeded()
-                    
                     self.BackButtonOutlet.alpha = 0.0
                     self.NextButtonOutlet.alpha = 0.0
-                    
-                    
             }, completion: {
                 (finished: Bool) -> Void in
             })
@@ -264,36 +240,15 @@ class CardioScreenViewController: UIViewController {
                 (finished: Bool) -> Void in
             })
             
-            
             delayWithSeconds(3.0) {
                 self.dismiss(animated: true, completion: nil)
             }
         }
         
-        //        if exerciseStepCount == WorkoutEnd-1 {
-        //            self.NextButtonOutlet.setTitle("Finish", for: .normal)
-        //        }
         
-        if exerciseStepCount != WorkoutEnd {
+        if exerciseStepCount < WorkoutEnd {
             
-            func CardUpdateAll() {
-                self.WorkoutWelcome.text = ExerciseLibrary.WelcomeArrayCore.randomItem()
-                self.ExerciseName.text = ExerciseLibrary.ExerciseNameArrayCore.randomItem()
-                self.BothNumbers = library.ExerciseNumberArrayCore.randomItem()
-                self.ExerciseNumber.text = BothNumbers
-                self.ExerciseNumber2.text = BothNumbers
-                //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
-                self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-                print("draw card")
-            }
-            //      Initial Card Update
-            CardUpdateAll()
-            
-            
-            
-            
-            
-            
+
             // Fade out to set the text
             UIView.animate(
                 withDuration: 0.25,
@@ -310,7 +265,7 @@ class CardioScreenViewController: UIViewController {
                 
                 
                 //  Card Change
-                CardUpdateAll()
+                self.CardUpdateAll()
                 
                 
                 // Fade in
@@ -344,21 +299,6 @@ class CardioScreenViewController: UIViewController {
         })
     }
 }
-
-extension UIViewController {
-    func CardUpdateAll() {
-        self.WorkoutWelcome.text = WelcomeArrayCore.randomItem()
-        self.ExerciseName.text = ExerciseNameArrayCore.randomItem()
-        self.BothNumbers = ExerciseNumberArrayCore.randomItem()
-        self.ExerciseNumber.text = BothNumbers
-        self.ExerciseNumber2.text = BothNumbers
-        //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
-        self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-        print("draw card")
-    }
-}
-
-
 
 
 extension Array {
