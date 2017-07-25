@@ -67,7 +67,7 @@ class ArmsScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let library = ExerciseLibrary()
-        library.welcomeArray1
+//        library.welcomeArray1
         print("\(ExerciseLibrary.testVariable)")
         
 //        ExerciseLibrary.welcomeArray1
