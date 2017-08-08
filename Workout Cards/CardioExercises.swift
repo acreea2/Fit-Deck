@@ -32,18 +32,14 @@ class CardioScreenViewController: UIViewController {
     // Public
     var confettiView: SAConfettiView?
     
+    let library = ExerciseLibrary()
     
-    var exerciseStepCount = 1
-    
+    var exerciseStepCount = 0
     
     var BothNumbers = ""
     
-    
-    let library = ExerciseLibrary()
-    
     //      Create Goal
     var WorkoutEnd = 10
-    
     
     
     //      Functions
@@ -54,32 +50,26 @@ class CardioScreenViewController: UIViewController {
         }
     }
     
+    func CardUpdateAll(){
+        self.WorkoutWelcome.text = library.WelcomeArray3.randomItem()
+        self.ExerciseName.text = library.ExerciseNameArray3.randomItem()
+        self.BothNumbers = library.ExerciseNumberArray3.randomItem()
+        self.ExerciseNumber.text = BothNumbers
+        self.ExerciseNumber2.text = BothNumbers
+        exerciseStepCount += 1
+        print("draw card new count = \(exerciseStepCount)")
+        self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
+    }
+    
     func LastCard() {
-//        if exerciseStepCount == WorkoutEnd {
             confettiView = SAConfettiView(frame: self.view.frame)
             self.WorkoutWelcome.text = library.ExerciseExitArray3.randomItem()
-        
             self.view.insertSubview(confettiView!, aboveSubview: self.view)
             confettiView?.startConfetti()
             print("Confetti Start")
-            
-//        }
     }
     
-    func CardUpdateAll(){
-//        if exerciseStepCount != WorkoutEnd  {
-            print("draw card + \(exerciseStepCount)")
-            self.WorkoutWelcome.text = library.WelcomeArray3.randomItem()
-            self.ExerciseName.text = library.ExerciseNameArray3.randomItem()
-            self.BothNumbers = library.ExerciseNumberArray3.randomItem()
-            self.ExerciseNumber.text = BothNumbers
-            self.ExerciseNumber2.text = BothNumbers
-            //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
-            self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-            exerciseStepCount += 1
-            
-//        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -211,7 +201,7 @@ class CardioScreenViewController: UIViewController {
         
         
         //      When Goal is reached
-        if exerciseStepCount > WorkoutEnd {
+        if exerciseStepCount == WorkoutEnd {
             print("Goal Get Ready To Exit")
             LastCard()
             
@@ -307,15 +297,3 @@ extension Array {
         return self[index]
     }
 }
-
-
-
-//        Kerning Fonts
-//class Kerning{
-//    static func setCharacterSpacing(string:String) -> NSMutableAttributedString {
-//
-//        let attributedStr = NSMutableAttributedString(string: string)
-//        attributedStr.addAttribute(NSKernAttributeName, value: 3.25, range: NSMakeRange(0, attributedStr.length))
-//        return attributedStr
-//    }
-//}

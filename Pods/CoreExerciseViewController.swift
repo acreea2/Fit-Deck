@@ -7,14 +7,12 @@
 //
 
 import UIKit
-//import SAConfettiView
+import SAConfettiView
 
-class ExerciseScreenViewController: UIViewController {
-    
+class CoreExerciseViewController: UIViewController {
     
     @IBOutlet weak var WorkoutWelcome: UILabel!
     @IBOutlet weak var CurrentWorkoutCard: UIView!
-    
     @IBOutlet weak var NextButtonOutlet: UIButton!
     
     @IBOutlet weak var ActivityCounterLabel: UILabel!
@@ -28,37 +26,36 @@ class ExerciseScreenViewController: UIViewController {
     @IBOutlet weak var BackgroundView: UIView!
     
     
+    @IBOutlet weak var testVariableLabel: UILabel!
+    
+    
+    
+    
+    
     // Data Properties
     // Public
-    //    var Library: ExerciseLibrary?
+    var confettiView: SAConfettiView?
     
-//    var SAConfettiView: SAConfettiView?
+    let library = ExerciseLibrary()
+    let HomeFourCard = FourCardHomeViewController()
     
-    var exerciseStepCount = 1
+    var exerciseStepCount = Int()
     
-    //    Create Options
-    let welcomeArray = ["Ready to sweat?", "You can do it!", "Harder, Better, Faster, Stronger", "Here we go!", "Let's do this!", "Let's get to it!"]
-    
-    let ExerciseNameArray = ["Jumping Jacks", "High Knees", "Mountain Climbers", "Burpees"]
-    
-    let ExerciseNumberArray = ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+    var initialCount = Int()
     
     var BothNumbers = ""
     
+    var wtfLabel = "yolo"
     
+    var masterCountClass2: MasterCounterClass2!
     
-    let ExerciseExitArray = ["My core is sore just from watching!", "Great Job!", "You made it!", "You look like a pro.", "I think I'm starting to see some abs.", "You just burned like 100,000 calores."]
-    
-    
-//      ** Confetti
-    
-
     
     
     //      Create Goal
     var WorkoutEnd = 10
     
     
+    //      Functions
     //      Create Delay
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -66,35 +63,43 @@ class ExerciseScreenViewController: UIViewController {
         }
     }
     
+    
+    func CardUpdateAll(){
+        self.WorkoutWelcome.text = library.WelcomeArray1.randomItem()
+        self.ExerciseName.text = library.ExerciseNameArray1.randomItem()
+        self.BothNumbers = library.ExerciseNumberArray1.randomItem()
+        self.ExerciseNumber.text = BothNumbers
+        self.ExerciseNumber2.text = BothNumbers
+        exerciseStepCount += 1
+        initialCount += 1
+        masterCountClass2.classCounter2 += 1
+        print("master = \(masterCountClass2.classCounter2)")
+        
+        print("this screen = \(exerciseStepCount)")
+        self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
+    }
+    
+    func LastCard() {
+        confettiView = SAConfettiView(frame: self.view.frame)
+        self.WorkoutWelcome.text = library.ExerciseExitArray1.randomItem()
+        self.view.insertSubview(confettiView!, aboveSubview: self.view)
+        confettiView?.startConfetti()
+    }
+    
+    
+ 
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //      Why does below break?
-        //      BackgroundView.applyGradient01()
         
-        //                Random Inspiring Message
+        testVariableLabel.text = wtfLabel
         
-        //    self.WorkoutWelcome.text = mainInstance.Greeting
-        //        print(mainInstance.Greeting)
-        
-        //      Setting first randoms
-        
-        
-        
-        func CardUpdateAll() {
-            self.WorkoutWelcome.text = welcomeArray.randomItem()
-            self.ExerciseName.text = ExerciseNameArray.randomItem()
-            self.BothNumbers = ExerciseNumberArray.randomItem()
-            self.ExerciseNumber.text = BothNumbers
-            self.ExerciseNumber2.text = BothNumbers
-            //            self.ActivityCounterLabel.text = "\"exerciseStepCount" of 10"
-            self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-        }
-        
+        //      Initial Card Update
         CardUpdateAll()
-        
-        
-        
         
         
         //        Intro Message Setting
@@ -129,8 +134,9 @@ class ExerciseScreenViewController: UIViewController {
         CurrentWorkoutCard.layer.shadowOpacity = 0.15
         CurrentWorkoutCard.layer.shadowOffset = CGSize(width: 5, height: 5)
         
+        
+        
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -179,10 +185,15 @@ class ExerciseScreenViewController: UIViewController {
         }, completion: {
             (finished: Bool) -> Void in
         })
-        
-        
     } // View Did Appear End
     
+    
+    
+
+
+  
+ 
+
     
     
     
@@ -191,10 +202,18 @@ class ExerciseScreenViewController: UIViewController {
     @IBAction func BackButtonTapped(_ sender: Any) {
         self.dismiss(animated: true,  completion: nil)
     }
+   
+    
+    //    Data Transfers
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        print("initialcount = \(initialCount)")
+//        let HomeFourCard = segue.destination as! FourCardHomeViewController
+//        HomeFourCard.MasterCount = "working"
+//        print("MasterCount = \(HomeFourCard.MasterCount)")
+//    }
     
     
-    
-    
+    //    Button Style on Tap
     @IBAction func NextButtonTouchDown(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
@@ -205,9 +224,8 @@ class ExerciseScreenViewController: UIViewController {
     
     
     
+    //        Next Button Motion
     @IBAction func NextButtonTapped(_ sender: Any) {
-        
-        //        Next Button Motion
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: {
@@ -218,12 +236,7 @@ class ExerciseScreenViewController: UIViewController {
         //      When Goal is reached
         if exerciseStepCount == WorkoutEnd {
             print("Goal Get Ready To Exit")
-            
-            
-//            SAConfettiView!.startConfetti()
-            
-            self.WorkoutWelcome.text = ExerciseExitArray.randomItem()
-            
+            LastCard()
             
             //      Fade Card Out
             UIView.animate(
@@ -234,13 +247,10 @@ class ExerciseScreenViewController: UIViewController {
                 options: UIViewAnimationOptions.curveEaseIn, animations: {
                     self.CurrentWorkoutCard.alpha = 0.0
                     self.CurrentWorkoutCard.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//                    self.CurrentWorkoutCard.frame.origin.y = self.CurrentWorkoutCard.frame.origin.y+800
+                    //                    self.CurrentWorkoutCard.frame.origin.y = self.CurrentWorkoutCard.frame.origin.y+800
                     self.CurrentWorkoutCard?.layoutIfNeeded()
-                    
                     self.BackButtonOutlet.alpha = 0.0
                     self.NextButtonOutlet.alpha = 0.0
-                    
-                    
             }, completion: {
                 (finished: Bool) -> Void in
             })
@@ -253,33 +263,13 @@ class ExerciseScreenViewController: UIViewController {
                 (finished: Bool) -> Void in
             })
             
-            
             delayWithSeconds(3.0) {
-                        self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
         
-        //        if exerciseStepCount == WorkoutEnd-1 {
-        //            self.NextButtonOutlet.setTitle("Finish", for: .normal)
-        //        }
         
-        if exerciseStepCount != WorkoutEnd {
-            func CardUpdateAll() {
-                self.WorkoutWelcome.text = welcomeArray.randomItem()
-                self.ExerciseName.text = ExerciseNameArray.randomItem()
-                self.BothNumbers = ExerciseNumberArray.randomItem()
-                self.ExerciseNumber.text = BothNumbers
-                self.ExerciseNumber2.text = BothNumbers
-                
-                exerciseStepCount += 1
-                print("\(exerciseStepCount)")
-                
-                self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
-                
-            }
-            
-            
-            
+        if exerciseStepCount < WorkoutEnd {
             
             
             // Fade out to set the text
@@ -298,7 +288,7 @@ class ExerciseScreenViewController: UIViewController {
                 
                 
                 //  Card Change
-                CardUpdateAll()
+                self.CardUpdateAll()
                 
                 
                 // Fade in
@@ -330,50 +320,15 @@ class ExerciseScreenViewController: UIViewController {
                 self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         })
-        
     }
-    
- 
-//    
-//    func setUpConfetti() {
-//        let confettiView = SAConfettiView(frame: self.view.bounds)
-//        self.view.addSubview(confettiView)
-//    }
-//    
-//    
-//    func startConfetti() {
-//        startConfetti()
-//        
-//    }
-//    
-//    func stopConfetti() {
-//        stopConfetti()
-//    }
-//    
-    
-    
 }
 
 
 
-
-
-
+//
 //extension Array {
 //    func randomItem() -> Element {
 //        let index = Int(arc4random_uniform(UInt32(self.count)))
 //        return self[index]
-//    }
-//}
-
-
-
-//        Kerning Fonts
-//class Kerning{
-//    static func setCharacterSpacing(string:String) -> NSMutableAttributedString {
-//
-//        let attributedStr = NSMutableAttributedString(string: string)
-//        attributedStr.addAttribute(NSKernAttributeName, value: 3.25, range: NSMakeRange(0, attributedStr.length))
-//        return attributedStr
 //    }
 //}
