@@ -1,18 +1,20 @@
 //
-//  ExerciseScreenViewController.swift
-//  CORE
+//  LegsViewController.swift
+//  
 //
-//  Created by Andrew Acree on 7/15/17.
+//  Created by Andrew Acree on 8/9/17.
 //
 //
 
 import UIKit
 import SAConfettiView
 
-class CoreExerciseViewController: UIViewController {
+class LegsViewController: UIViewController {
+    
     
     @IBOutlet weak var WorkoutWelcome: UILabel!
     @IBOutlet weak var CurrentWorkoutCard: UIView!
+    
     @IBOutlet weak var NextButtonOutlet: UIButton!
     
     @IBOutlet weak var ActivityCounterLabel: UILabel!
@@ -24,11 +26,6 @@ class CoreExerciseViewController: UIViewController {
     @IBOutlet weak var ExerciseName: UILabel!
     
     @IBOutlet weak var BackgroundView: UIView!
-    
-    
-    @IBOutlet weak var testVariableLabel: UILabel!
-    
-    
     
     
     
@@ -46,7 +43,7 @@ class CoreExerciseViewController: UIViewController {
     var BothNumbers = ""
     
     
-//    Passed around master count
+    //    Passed around master count
     var masterCountClass2: MasterCounterClass2!
     
     
@@ -86,8 +83,8 @@ class CoreExerciseViewController: UIViewController {
     }
     
     
- 
-
+    
+    
     
     
     
@@ -185,11 +182,11 @@ class CoreExerciseViewController: UIViewController {
     
     
     
-
-
-  
- 
-
+    
+    
+    
+    
+    
     
     
     
@@ -198,15 +195,15 @@ class CoreExerciseViewController: UIViewController {
     @IBAction func BackButtonTapped(_ sender: Any) {
         self.dismiss(animated: true,  completion: nil)
     }
-   
+    
     
     //    Data Transfers
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        print("initialcount = \(initialCount)")
-//        let HomeFourCard = segue.destination as! FourCardHomeViewController
-//        HomeFourCard.MasterCount = "working"
-//        print("MasterCount = \(HomeFourCard.MasterCount)")
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        print("initialcount = \(initialCount)")
+    //        let HomeFourCard = segue.destination as! FourCardHomeViewController
+    //        HomeFourCard.MasterCount = "working"
+    //        print("MasterCount = \(HomeFourCard.MasterCount)")
+    //    }
     
     
     //    Button Style on Tap

@@ -134,7 +134,7 @@
                                                         <color key="backgroundColor" red="0.22561690211296082" green="0.83685165643692017" blue="0.83105760812759399" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title=" "/>
                                                         <connections>
-                                                            <segue destination="5Qj-70-kyt" kind="presentation" id="pYS-dd-iDg"/>
+                                                            <segue destination="5Qj-70-kyt" kind="presentation" identifier="SegueToCore" id="pYS-dd-iDg"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-Mb-OBu">
@@ -163,7 +163,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="230.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
-                                                            <segue destination="DVT-gu-O08" kind="presentation" id="4Yi-CI-bKI"/>
+                                                            <segue destination="DVT-gu-O08" kind="presentation" identifier="SegueToArms" id="4Yi-CI-bKI"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Is-fzU">
@@ -198,7 +198,7 @@
                                                         <color key="backgroundColor" red="1" green="0.57087141279999998" blue="0.51493513580000005" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title=" "/>
                                                         <connections>
-                                                            <segue destination="IQb-QI-9m8" kind="showDetail" id="v3Q-PJ-wd9"/>
+                                                            <segue destination="IQb-QI-9m8" kind="presentation" identifier="SegueToCardio" id="v3Q-PJ-wd9"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARDIO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GU-qy-2Kh">
@@ -227,7 +227,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="230.5"/>
                                                         <color key="backgroundColor" red="0.10627265499999999" green="0.1132157119" blue="0.15911063759999999" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <connections>
-                                                            <segue destination="4tY-qM-PSj" kind="showDetail" id="bRj-5C-5yI"/>
+                                                            <segue destination="4tY-qM-PSj" kind="presentation" identifier="SegueToLegs" id="bRj-5C-5yI"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5U-Lz-YuB">
@@ -260,7 +260,7 @@
                                     <constraint firstAttribute="width" constant="40" id="KOp-2s-gwE"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="ceY-9s-HJc" kind="presentation" id="0d7-ux-fag"/>
+                                    <segue destination="ceY-9s-HJc" kind="presentation" identifier="SegueToSpecial" id="0d7-ux-fag"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,12 +389,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acj-fG-92M" userLabel="testVariableLabel">
-                                <rect key="frame" x="339" y="110.5" width="10" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22561690209999999" green="0.83685165640000003" blue="0.83105760809999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -406,7 +400,6 @@
                             <constraint firstItem="8yv-d3-u32" firstAttribute="top" secondItem="99F-rv-I2I" secondAttribute="bottom" constant="32" id="8Ad-Lo-K7O"/>
                             <constraint firstItem="Wt2-sC-AwE" firstAttribute="top" secondItem="hEE-UJ-t6c" secondAttribute="bottom" constant="48" id="BfC-e6-5Xy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="99F-rv-I2I" secondAttribute="trailing" constant="32" id="EPB-sx-rMm"/>
-                            <constraint firstItem="acj-fG-92M" firstAttribute="top" secondItem="Wt2-sC-AwE" secondAttribute="bottom" constant="10" id="Foh-DW-k4e"/>
                             <constraint firstItem="DCG-RO-cdO" firstAttribute="centerY" secondItem="ynG-fK-V1p" secondAttribute="centerY" id="KsV-d2-LOk"/>
                             <constraint firstItem="VTr-L8-BEZ" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leading" constant="16" id="Mgb-U3-nog"/>
                             <constraint firstItem="N4M-XX-GUK" firstAttribute="centerX" secondItem="ynG-fK-V1p" secondAttribute="centerX" id="Y74-6S-DjP"/>
@@ -415,7 +408,6 @@
                             <constraint firstItem="99F-rv-I2I" firstAttribute="top" secondItem="Wt2-sC-AwE" secondAttribute="bottom" constant="48" id="hU5-kp-8gx"/>
                             <constraint firstItem="8yv-d3-u32" firstAttribute="centerX" secondItem="ynG-fK-V1p" secondAttribute="centerX" id="iaR-zu-NSf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DCG-RO-cdO" secondAttribute="trailing" constant="40" id="pKm-Yb-GRZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="acj-fG-92M" secondAttribute="trailing" constant="10" id="tih-HP-Wc5"/>
                             <constraint firstItem="DCG-RO-cdO" firstAttribute="leading" secondItem="ynG-fK-V1p" secondAttribute="leadingMargin" constant="40" id="vGd-08-PPt"/>
                             <constraint firstItem="dtX-sM-bqR" firstAttribute="top" secondItem="8yv-d3-u32" secondAttribute="bottom" constant="32" id="yb9-Yd-57X"/>
                         </constraints>
@@ -429,12 +421,11 @@
                         <outlet property="ExerciseNumber2" destination="zeo-SP-rbe" id="pHF-bE-km2"/>
                         <outlet property="NextButtonOutlet" destination="8yv-d3-u32" id="lRw-vr-Hzy"/>
                         <outlet property="WorkoutWelcome" destination="DCG-RO-cdO" id="Iy4-ZP-ceI"/>
-                        <outlet property="testVariableLabel" destination="acj-fG-92M" id="HrL-0d-daw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkz-t6-P76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="1105.9970014992505"/>
+            <point key="canvasLocation" x="903" y="1448"/>
         </scene>
         <!--Arms Screen View Controller-->
         <scene sceneID="Ynu-fC-hAu">
@@ -571,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN6-KQ-96d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="1594"/>
+            <point key="canvasLocation" x="1740" y="1448"/>
         </scene>
         <!--Cardio Screen View Controller-->
         <scene sceneID="dLf-cl-W9D">
@@ -708,12 +699,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spb-UQ-xTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="2418"/>
+            <point key="canvasLocation" x="902" y="2197"/>
         </scene>
-        <!--Cardio Screen View Controller-->
+        <!--Legs View Controller-->
         <scene sceneID="YQR-IX-AQz">
             <objects>
-                <viewController id="4tY-qM-PSj" customClass="CardioScreenViewController" customModule="Workout_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4tY-qM-PSj" customClass="LegsViewController" customModule="Workout_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JbZ-cU-W4F"/>
                         <viewControllerLayoutGuide type="bottom" id="g4c-fo-WEH"/>
@@ -836,16 +827,16 @@
                         <outlet property="ActivityCounterLabel" destination="Cs8-JC-AbE" id="Gbl-e0-7xs"/>
                         <outlet property="BackButtonOutlet" destination="M4G-z4-xPK" id="sOf-WZ-Vnb"/>
                         <outlet property="CurrentWorkoutCard" destination="tCk-bb-oHs" id="aom-hl-S94"/>
-                        <outlet property="ExerciseName" destination="2yb-Im-ttG" id="iff-xh-aJd"/>
+                        <outlet property="ExerciseName" destination="2yb-Im-ttG" id="97L-06-FM0"/>
                         <outlet property="ExerciseNumber" destination="Xo6-Nj-O1F" id="ztK-8w-7NV"/>
                         <outlet property="ExerciseNumber2" destination="Au8-RX-eeF" id="hvK-3x-X1b"/>
                         <outlet property="NextButtonOutlet" destination="P10-5j-kWK" id="FBP-hF-GxB"/>
-                        <outlet property="WorkoutWelcome" destination="oXd-Wg-eCj" id="WKn-Jm-ZFN"/>
+                        <outlet property="WorkoutWelcome" destination="oXd-Wg-eCj" id="6uF-fy-N1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDs-le-H75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="2418"/>
+            <point key="canvasLocation" x="1740" y="2197"/>
         </scene>
         <!--Exercise Screen View Controller-->
         <scene sceneID="zdh-MI-xU8">
@@ -980,7 +971,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxO-hG-Vaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="1594"/>
+            <point key="canvasLocation" x="2481" y="788"/>
         </scene>
     </scenes>
     <resources>

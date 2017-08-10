@@ -36,29 +36,77 @@ class FourCardHomeViewController: UIViewController {
     
     let library = ExerciseLibrary()
     
-    var MasterCount = "broken"
+//    Passable Counter
+    var masterCounterClass2 = MasterCounterClass2(counter2: 0)
     
     
-    var masterCounterClass2 = MasterCounterClass2(counter2: 10)
     
-    
-    //    Data Transfers
+    //    Transfer to Core
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let CoreScreen = segue.destination as! CoreExerciseViewController
-        CoreScreen.masterCountClass2 = masterCounterClass2
+        
+        // https://stackoverflow.com/questions/31457300/swift-prepareforsegue-with-two-different-segues
+        
+        
+        if segue.identifier == "SegueToCore" {
+            let CoreScreen = segue.destination as! CoreExerciseViewController
+            CoreScreen.masterCountClass2 = masterCounterClass2
+        }
+        
+        if segue.identifier == "SegueToArms" {
+            let ArmsScreen = segue.destination as! ArmsScreenViewController
+            ArmsScreen.masterCountClass2 = masterCounterClass2
+        }
+        
+        if segue.identifier == "SegueToCardio" {
+            let CardioScreen = segue.destination as! CardioScreenViewController
+            CardioScreen.masterCountClass2 = masterCounterClass2
+        }
+
+        if segue.identifier == "SegueToLegs" {
+            let LegsScreen = segue.destination as! LegsViewController
+            LegsScreen.masterCountClass2 = masterCounterClass2
+        }
+        
+        
+//        let ArmsScreen = segue.destination as! ArmsScreenViewController
+//        ArmsScreen.masterCountClass2 = masterCounterClass2
+//
+//        let CardioScreen = segue.destination as! CardioScreenViewController
+//        CardioScreen.masterCountClass2 = masterCounterClass2
+        
+//        let LegsScreen = segue.destination as! Legs
+//        ArmsScreen.masterCountClass2 = masterCounterClass2
     }
     
+    
+    
+//    //    Transfer to Cardio
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let CoreScreen = segue.destination as! CoreExerciseViewController
+//        CoreScreen.masterCountClass2 = masterCounterClass2
+//    }
+//    
+//    //    Transfer to Legs
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let CoreScreen = segue.destination as! CoreExerciseViewController
+//        CoreScreen.masterCountClass2 = masterCounterClass2
+//    }
+//    
+//    
+//    //    Transfer to Secret
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let CoreScreen = segue.destination as! CoreExerciseViewController
+//        CoreScreen.masterCountClass2 = masterCounterClass2
+//    }
+//    
+//    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("MasterCount = \(MasterCount)")
         totalExerciseCount.text = "\(masterCounterClass2.classCounter2) sets complete"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         
         //        Card Intros
         //        Intro Area Welcome Message
@@ -91,8 +139,6 @@ class FourCardHomeViewController: UIViewController {
         Card4.layer.shadowOffset = CGSize(width: 5, height: 5)
         
         
-        
-        
         // Corner Radius + Gradient
         Card1.layer.cornerRadius = 12
         Card1.layer.borderWidth = 1
@@ -118,8 +164,6 @@ class FourCardHomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
         
         UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.Card1.alpha = 1.0
@@ -177,18 +221,20 @@ class FourCardHomeViewController: UIViewController {
 
 
 
+//  Original Example of a string
+//class MasterCounterClass  {
+//    var classCounter: String
+//    init(counter: String){
+//        classCounter = counter
+//    }
+//}
 
-class MasterCounterClass  {
-    var classCounter: String
-    init(counter: String){
-        classCounter = counter
-    }
-}
 
+// Class counter for total steps
 class MasterCounterClass2  {
     var classCounter2: Int
     init(counter2: Int){
-        classCounter2 = 10
+        classCounter2 = 0
     }
 }
 

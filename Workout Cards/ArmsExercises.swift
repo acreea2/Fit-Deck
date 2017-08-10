@@ -42,6 +42,10 @@ class ArmsScreenViewController: UIViewController {
     var WorkoutEnd = 10
     
     
+    //    Passed around master count
+    var masterCountClass2: MasterCounterClass2!
+    
+    
     //      Functions
     //      Create Delay
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
@@ -51,19 +55,20 @@ class ArmsScreenViewController: UIViewController {
     }
     
     func CardUpdateAll(){
-        self.WorkoutWelcome.text = library.WelcomeArray2.randomItem()
-        self.ExerciseName.text = library.ExerciseNameArray2.randomItem()
-        self.BothNumbers = library.ExerciseNumberArray2.randomItem()
+        self.WorkoutWelcome.text = library.WelcomeArray2.randomItem2()
+        self.ExerciseName.text = library.ExerciseNameArray2.randomItem2()
+        self.BothNumbers = library.ExerciseNumberArray2.randomItem2()
         self.ExerciseNumber.text = BothNumbers
         self.ExerciseNumber2.text = BothNumbers
         exerciseStepCount += 1
+        masterCountClass2.classCounter2 += 1
         print("draw card new count = \(exerciseStepCount)")
         self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
     }
     
     func LastCard() {
         confettiView = SAConfettiView(frame: self.view.frame)
-        self.WorkoutWelcome.text = library.ExerciseExitArray2.randomItem()
+        self.WorkoutWelcome.text = library.ExerciseExitArray2.randomItem2()
         self.view.insertSubview(confettiView!, aboveSubview: self.view)
         confettiView?.startConfetti()
         print("Confetti Start")
@@ -73,15 +78,6 @@ class ArmsScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //      How to send back to library ?
-        //        var exercise = "cardio"
-        
-        //      Why does below break?
-        //      BackgroundView.applyGradient01()
-        
-        
         
         //      Initial Card Update
         CardUpdateAll()

@@ -42,6 +42,10 @@ class CardioScreenViewController: UIViewController {
     var WorkoutEnd = 10
     
     
+    //    Passed around master count
+    var masterCountClass2: MasterCounterClass2!
+    
+    
     //      Functions
     //      Create Delay
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
@@ -51,19 +55,22 @@ class CardioScreenViewController: UIViewController {
     }
     
     func CardUpdateAll(){
-        self.WorkoutWelcome.text = library.WelcomeArray3.randomItem()
-        self.ExerciseName.text = library.ExerciseNameArray3.randomItem()
-        self.BothNumbers = library.ExerciseNumberArray3.randomItem()
+        self.WorkoutWelcome.text = library.WelcomeArray3.randomItem2()
+        self.ExerciseName.text = library.ExerciseNameArray3.randomItem2()
+        self.BothNumbers = library.ExerciseNumberArray3.randomItem2()
         self.ExerciseNumber.text = BothNumbers
         self.ExerciseNumber2.text = BothNumbers
         exerciseStepCount += 1
+        print(masterCountClass2.classCounter2)
+        
+        masterCountClass2.classCounter2 += 1
         print("draw card new count = \(exerciseStepCount)")
         self.ActivityCounterLabel.text = "\(exerciseStepCount) of \(WorkoutEnd)"
     }
     
     func LastCard() {
             confettiView = SAConfettiView(frame: self.view.frame)
-            self.WorkoutWelcome.text = library.ExerciseExitArray3.randomItem()
+            self.WorkoutWelcome.text = library.ExerciseExitArray3.randomItem2()
             self.view.insertSubview(confettiView!, aboveSubview: self.view)
             confettiView?.startConfetti()
             print("Confetti Start")
@@ -291,9 +298,9 @@ class CardioScreenViewController: UIViewController {
 }
 
 
-extension Array {
-    func randomItem() -> Element {
-        let index = Int(arc4random_uniform(UInt32(self.count)))
-        return self[index]
-    }
-}
+//extension Array {
+//    func randomItem() -> Element {
+//        let index = Int(arc4random_uniform(UInt32(self.count)))
+//        return self[index]
+//    }
+//}
