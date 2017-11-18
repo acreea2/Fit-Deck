@@ -222,6 +222,7 @@ class CoreExerciseViewController: UIViewController {
     
     //        Next Button Motion
     @IBAction func NextButtonTapped(_ sender: Any) {
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.45, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.NextButtonOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: {

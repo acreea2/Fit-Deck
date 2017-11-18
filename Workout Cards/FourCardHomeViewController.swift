@@ -30,7 +30,6 @@ class FourCardHomeViewController: UIViewController {
     
     
     //    Variables
-    
     let color1a = UIColor(rgb: 0x4FE18A)
     let color1b = UIColor(rgb: 0x34CECA)
     
